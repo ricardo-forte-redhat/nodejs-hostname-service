@@ -11,4 +11,9 @@ const server = http.createServer((req, res) => {
 
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
+    setTimeout(message, 5000);
 });
+
+function message() {
+    console.log('Wait!!');
+}
